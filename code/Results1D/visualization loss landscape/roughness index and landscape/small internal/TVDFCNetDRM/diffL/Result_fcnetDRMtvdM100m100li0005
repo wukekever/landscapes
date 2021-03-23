@@ -1,0 +1,204 @@
+<stdin>:185: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+Current direction TVD of DRM is:  191.98260614633674
+1.0 % finished.
+Current direction TVD of DRM is:  186.4049607478716
+2.0 % finished.
+Current direction TVD of DRM is:  195.45494831717428
+3.0 % finished.
+Current direction TVD of DRM is:  193.31073929375984
+4.0 % finished.
+Current direction TVD of DRM is:  195.82276547034436
+5.0 % finished.
+Current direction TVD of DRM is:  193.66837864826383
+6.0 % finished.
+Current direction TVD of DRM is:  192.0056855284879
+7.000000000000001 % finished.
+Current direction TVD of DRM is:  194.13586228665528
+8.0 % finished.
+Current direction TVD of DRM is:  186.14186960541616
+9.0 % finished.
+Current direction TVD of DRM is:  195.03299273476256
+10.0 % finished.
+Current direction TVD of DRM is:  169.05742369729464
+11.0 % finished.
+Current direction TVD of DRM is:  185.51220710247134
+12.0 % finished.
+Current direction TVD of DRM is:  192.55214324977905
+13.0 % finished.
+Current direction TVD of DRM is:  193.024280198901
+14.000000000000002 % finished.
+Current direction TVD of DRM is:  191.73499013262253
+15.0 % finished.
+Current direction TVD of DRM is:  194.4018751199724
+16.0 % finished.
+Current direction TVD of DRM is:  179.66537811701477
+17.0 % finished.
+Current direction TVD of DRM is:  193.4095729118496
+18.0 % finished.
+Current direction TVD of DRM is:  196.84183805475115
+19.0 % finished.
+Current direction TVD of DRM is:  196.05037208836646
+20.0 % finished.
+Current direction TVD of DRM is:  195.3756657546217
+21.0 % finished.
+Current direction TVD of DRM is:  192.16697377792514
+22.0 % finished.
+Current direction TVD of DRM is:  196.75522626430242
+23.0 % finished.
+Current direction TVD of DRM is:  190.97186240167318
+24.0 % finished.
+Current direction TVD of DRM is:  196.3569800195868
+25.0 % finished.
+Current direction TVD of DRM is:  192.82440981575877
+26.0 % finished.
+Current direction TVD of DRM is:  196.73866636426374
+27.0 % finished.
+Current direction TVD of DRM is:  195.54007871459677
+28.000000000000004 % finished.
+Current direction TVD of DRM is:  195.29221276295002
+28.999999999999996 % finished.
+Current direction TVD of DRM is:  191.54024713584116
+30.0 % finished.
+Current direction TVD of DRM is:  196.41780456518487
+31.0 % finished.
+Current direction TVD of DRM is:  192.20745211412202
+32.0 % finished.
+Current direction TVD of DRM is:  195.9989658990095
+33.0 % finished.
+Current direction TVD of DRM is:  158.50121450286625
+34.0 % finished.
+Current direction TVD of DRM is:  193.7563825830029
+35.0 % finished.
+Current direction TVD of DRM is:  193.02735496653406
+36.0 % finished.
+Current direction TVD of DRM is:  190.64885327701262
+37.0 % finished.
+Current direction TVD of DRM is:  193.30896500593306
+38.0 % finished.
+Current direction TVD of DRM is:  192.47337312905918
+39.0 % finished.
+Current direction TVD of DRM is:  189.61358587068358
+40.0 % finished.
+Current direction TVD of DRM is:  196.51790485888327
+41.0 % finished.
+Current direction TVD of DRM is:  193.40675551080355
+42.0 % finished.
+Current direction TVD of DRM is:  190.78475392121663
+43.0 % finished.
+Current direction TVD of DRM is:  193.0704747181719
+44.0 % finished.
+Current direction TVD of DRM is:  190.47886336991468
+45.0 % finished.
+Current direction TVD of DRM is:  171.81665124068456
+46.0 % finished.
+Current direction TVD of DRM is:  193.24618624475357
+47.0 % finished.
+Current direction TVD of DRM is:  194.03366677764134
+48.0 % finished.
+Current direction TVD of DRM is:  189.43603018682086
+49.0 % finished.
+Current direction TVD of DRM is:  193.1379977012145
+50.0 % finished.
+Current direction TVD of DRM is:  192.78962045886175
+51.0 % finished.
+Current direction TVD of DRM is:  171.96964538133284
+52.0 % finished.
+Current direction TVD of DRM is:  185.72421521559443
+53.0 % finished.
+Current direction TVD of DRM is:  196.54719359259252
+54.0 % finished.
+Current direction TVD of DRM is:  192.8525417133835
+55.00000000000001 % finished.
+Current direction TVD of DRM is:  186.70643245978303
+56.00000000000001 % finished.
+Current direction TVD of DRM is:  184.17554014387
+56.99999999999999 % finished.
+Current direction TVD of DRM is:  194.60687476523685
+57.99999999999999 % finished.
+Current direction TVD of DRM is:  133.12011643198662
+59.0 % finished.
+Current direction TVD of DRM is:  192.23502067764744
+60.0 % finished.
+Current direction TVD of DRM is:  193.0514805443452
+61.0 % finished.
+Current direction TVD of DRM is:  194.1154565731442
+62.0 % finished.
+Current direction TVD of DRM is:  190.76997036536838
+63.0 % finished.
+Current direction TVD of DRM is:  190.42364912354552
+64.0 % finished.
+Current direction TVD of DRM is:  195.99816749383075
+65.0 % finished.
+Current direction TVD of DRM is:  198.01089510569727
+66.0 % finished.
+Current direction TVD of DRM is:  178.1607889653572
+67.0 % finished.
+Current direction TVD of DRM is:  193.40488069866353
+68.0 % finished.
+Current direction TVD of DRM is:  190.88960648407277
+69.0 % finished.
+Current direction TVD of DRM is:  195.34956126513225
+70.0 % finished.
+Current direction TVD of DRM is:  186.36316057395138
+71.0 % finished.
+Current direction TVD of DRM is:  194.41599822461836
+72.0 % finished.
+Current direction TVD of DRM is:  193.13302095626423
+73.0 % finished.
+Current direction TVD of DRM is:  193.69580130727266
+74.0 % finished.
+Current direction TVD of DRM is:  190.6896651527128
+75.0 % finished.
+Current direction TVD of DRM is:  164.58823933512497
+76.0 % finished.
+Current direction TVD of DRM is:  196.0081243835116
+77.0 % finished.
+Current direction TVD of DRM is:  194.3770202545242
+78.0 % finished.
+Current direction TVD of DRM is:  195.15678212551813
+79.0 % finished.
+Current direction TVD of DRM is:  193.6096915049081
+80.0 % finished.
+Current direction TVD of DRM is:  191.80470163927646
+81.0 % finished.
+Current direction TVD of DRM is:  191.8530815500158
+82.0 % finished.
+Current direction TVD of DRM is:  196.45997585150616
+83.0 % finished.
+Current direction TVD of DRM is:  186.80805201091147
+84.0 % finished.
+Current direction TVD of DRM is:  193.87681587440414
+85.0 % finished.
+Current direction TVD of DRM is:  195.02859341143554
+86.0 % finished.
+Current direction TVD of DRM is:  139.06398868853273
+87.0 % finished.
+Current direction TVD of DRM is:  192.78754703662375
+88.0 % finished.
+Current direction TVD of DRM is:  193.4644867687777
+89.0 % finished.
+Current direction TVD of DRM is:  194.0399470967844
+90.0 % finished.
+Current direction TVD of DRM is:  194.3573899258499
+91.0 % finished.
+Current direction TVD of DRM is:  188.5321272313426
+92.0 % finished.
+Current direction TVD of DRM is:  192.20830563231024
+93.0 % finished.
+Current direction TVD of DRM is:  189.13266556986252
+94.0 % finished.
+Current direction TVD of DRM is:  193.81075033714316
+95.0 % finished.
+Current direction TVD of DRM is:  188.34584743312874
+96.0 % finished.
+Current direction TVD of DRM is:  194.4830012844083
+97.0 % finished.
+Current direction TVD of DRM is:  197.07558463851757
+98.0 % finished.
+Current direction TVD of DRM is:  191.95334824297615
+99.0 % finished.
+Current direction TVD of DRM is:  188.94272371696638
+100.0 % finished.
+All directions average TVD of DRM is:  190.08624544125746
+Variance TVD of DRM is:  10.204503013218
+Total time costs:  3378.4954454898834 seconds
