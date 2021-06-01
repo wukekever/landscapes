@@ -22,13 +22,13 @@ from torch.optim.lr_scheduler import StepLR, MultiStepLR
 # In[ ]:
 
 
-torch.cuda.set_device(3)
 torch.set_default_tensor_type('torch.DoubleTensor')
 
 
 # In[ ]:
 
 
+# activation function
 def activation(x):
     return x * torch.sigmoid(x) 
 
@@ -72,13 +72,12 @@ input_width,layer_width = dimension, 20
 # In[ ]:
 
 
-net = Net(input_width,layer_width).cuda() # network for u on gpu
+net = Net(input_width,layer_width)
 
 
 # In[ ]:
 
 
-# defination of exact solution
 def u_ex(x):     
     temp = 1.0
     for i in range(dimension):
@@ -90,7 +89,6 @@ def u_ex(x):
 # In[ ]:
 
 
-# defination of f(x)
 def f(x):
     temp = 1.0
     for i in range(dimension):
@@ -106,14 +104,14 @@ def f(x):
 # generate points by random
 def generate_sample(data_size):
     sample_temp = torch.rand(data_size, dimension)
-    return sample_temp.cuda()
+    return sample_temp
 
 
 # In[ ]:
 
 
 def model(x):
-    x_temp = x.cuda()
+    x_temp = x
     D_x_0 = torch.prod(x_temp, axis = 1).reshape([x.size()[0], 1]) 
     D_x_1 = torch.prod(1.0 - x_temp, axis = 1).reshape([x.size()[0], 1]) 
     model_u_temp = D_x_0 * D_x_1 * net(x)
@@ -123,22 +121,24 @@ def model(x):
 # In[ ]:
 
 
-# loss function to DRM by auto differential
+# loss function to DGM by auto differential
 def loss_function(x):
-#     x = generate_sample(data_size).cuda()
-#     x.requires_grad = True
     u_hat = model(x)
-    grad_u_hat = torch.autograd.grad(outputs = u_hat, inputs = x, grad_outputs = torch.ones(u_hat.shape).cuda(), create_graph = True)
-    grad_u_sq = ((grad_u_hat[0]**2).sum(1)).reshape([len(grad_u_hat[0]), 1])
-    part = torch.sum(0.5 * grad_u_sq  - f(x) * u_hat)  / len(x)
-    return part
+    grad_u_hat = torch.autograd.grad(outputs = u_hat, inputs = x, grad_outputs = torch.ones(u_hat.shape), create_graph = True)
+    laplace_u = torch.zeros([len(grad_u_hat[0]), 1])
+    for index in range(dimension):
+        p_temp = grad_u_hat[0][:, index].reshape([len(grad_u_hat[0]), 1])
+        temp = torch.autograd.grad(outputs = p_temp, inputs = x, grad_outputs = torch.ones(p_temp.shape), create_graph = True, allow_unused = True)[0]
+        laplace_u = temp[:, index].reshape([len(grad_u_hat[0]), 1]) + laplace_u
+        part_2 = torch.sum((-laplace_u - f(x))**2)  / len(x)
+    return part_2 
 
 
 # In[ ]:
 
 
-data_size = 1000
-x = generate_sample(data_size).cuda()
+data_size = 10000
+x = generate_sample(data_size)
 x.requires_grad = True
 
 
@@ -424,11 +424,11 @@ def tvd(m, l_i):
 # In[ ]:
 
 
-M = 50
+M = 100
 m = 10
 l_i = 0.1
 
-TVD_DRM = 0.0
+TVD_DGM = 0.0
 
 time_start = time.time()
 
@@ -442,32 +442,22 @@ for count in range(M):
     Max.append(Max_temp)
     Min.append(Min_temp)
     Result.append(TVD_temp)
-    print('Current direction TVD of DRM is: ', TVD_temp)
-    TVD_DRM = TVD_DRM + TVD_temp
+    print('Current direction TVD of DGM is: ', TVD_temp)
+    TVD_DGM = TVD_DGM + TVD_temp
     print((count + 1) / M * 100, '% finished.')
 
 # print('Max of all is: ', np.max(Max))
 # print('Min of all is: ', np.min(Min))
 
-TVD_DRM = TVD_DRM / M 
-print('All directions average TVD of DRM is: ', TVD_DRM)
+TVD_DGM = TVD_DGM / M 
+print('All directions average TVD of DGM is: ', TVD_DGM)
 
-print('Variance TVD of DRM is: ', np.sqrt(np.var(Result, ddof = 1)))
+print('Variance TVD of DGM is: ', np.sqrt(np.var(Result, ddof = 1)))
+
+print('Roughness Index of DGM is: ', np.sqrt(np.var(Result, ddof = 1)) / TVD_DGM)
 
 time_end = time.time()
 print('Total time costs: ', time_end - time_start, 'seconds')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
