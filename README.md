@@ -22,8 +22,6 @@ One or more multi-GPU node(s) with the following main software/libraries install
 - matplotlib 2.2.2
 - ...
 
-Remark: One may have some problem with PyTorch about data on cuda and cpu when computing the roughness index, you can move the data and network on cpu, i.e., delete "torch.cuda.set_device(0)" and all ".cuda()".
-
 ## Citation
 
 If you find this code useful in your research, please cite:
