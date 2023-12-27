@@ -1,3 +1,1 @@
-# Understanding Loss Landscapes of Neural Network Models in Solving Partial Differential Equations
-
-
+# Roughness Index for Loss Landscapes of Neural Network Models of Partial Differential Equations
